@@ -1,5 +1,6 @@
 from pulp import LpProblem, LpVariable, LpMinimize, lpSum, LpStatus, value
 import pandas as pd
+import pprint
 
 # 問題のパラメータ
 bin_count = 5
@@ -67,5 +68,5 @@ packed_items_df = pd.DataFrame(
 packed_items_csv_path = "./data/min_fibp_packed_items.csv"
 packed_items_df.to_csv(packed_items_csv_path, index=False)
 
-print(results)
+pprint.pprint(results)
 print(packed_items_df)
